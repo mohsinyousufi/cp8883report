@@ -1,0 +1,2979 @@
+
+<style>
+  table {
+    border-collapse: collapse;
+    width: 50%;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+</style>
+
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>comment_id</th>
+      <th>parent_id</th>
+      <th>body</th>
+      <th>author</th>
+      <th>time</th>
+      <th>score</th>
+      <th>subreddit_id</th>
+      <th>thread_id</th>
+      <th>year</th>
+      <th>subreddit_name</th>
+      <th>sentiment</th>
+      <th>bert_sentiment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>jg5b9y4</td>
+      <td>NaN</td>
+      <td>Just tell me I will be able to ride it from PCM to a concert or a game at the Benz or State Farm and I'm all in.</td>
+      <td>Thrasher678</td>
+      <td>2023-04-13 17:20:20</td>
+      <td>161</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.998572</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>jg51z7v</td>
+      <td>NaN</td>
+      <td>Streetcar was approved as the LPA by the Marta board today.</td>
+      <td>NaN</td>
+      <td>2023-04-13 16:20:23</td>
+      <td>143</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4215</td>
+      <td>0.760574</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>jg51dtf</td>
+      <td>NaN</td>
+      <td>Just a friendly reminder: there is a limitless list of quiet, secluded suburban lifestyles to choose from in this state, and if you crave such a life, you are not entitled to it in the very limited list of places where it is not quiet and secluded in this state.</td>
+      <td>wambulancer</td>
+      <td>2023-04-13 16:16:36</td>
+      <td>314</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0498</td>
+      <td>0.994863</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>jg754li</td>
+      <td>NaN</td>
+      <td>selfish fuckwits don't know what it means to actually be a part of the city. \n\nas in, not just live and/or work here, but contribute in some way as a part of the civic community -- even to just tacitly support Smart Growth which this project very much is.\n\ntoo many of those suburban-minded fuckheads have stayed in city neighborhoods like this -- or moved here from their mind-numbing suburbs -- and are trying to keep "their" turf car-centric, low-density and sprawling. \n\nto anyone who wants to push back: go to NPU meetings and speak up, write your councilpersons and other civic leaders, get involved with Beltline Rail Now.\n\n*edit: typo fix*</td>
+      <td>atl_cracker</td>
+      <td>2023-04-14 02:33:53</td>
+      <td>32</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.9136</td>
+      <td>0.982499</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>jg4zx93</td>
+      <td>NaN</td>
+      <td>&gt;Critics including the Old Fourth Ward Streetcar Impact Team say Beltline rail could pose safety risks and construction headaches. They argue the streetcar could also ruin the experience of using the hugely popular and crowded path, they say.\n\nThis is the most astroturfed group name and statement I've ever heard</td>
+      <td>seedsseedsseeds</td>
+      <td>2023-04-13 16:07:03</td>
+      <td>189</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.3415</td>
+      <td>0.005040</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>jg5l3m2</td>
+      <td>NaN</td>
+      <td>Didn't people fight the Beltline to begin with? Progress like this is always fought. Transit on the Beltline will only add to it and what it does for the city. Get the transit done!</td>
+      <td>TimLikesPi</td>
+      <td>2023-04-13 18:28:47</td>
+      <td>70</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.6679</td>
+      <td>0.008106</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>jg5ywoc</td>
+      <td>NaN</td>
+      <td>Three cheers for the brave nimbys who work so tirelessly to keep the beltline inaccessible as well as their personal little oasis. If the unwashed masses want to go there, let them drive a car and pollute our air and clog our city streets. Because if there's one thing our fair city needs, it's more traffic. Because driving to a trail makes perfect sense, and this rail idea is certainly coming out of left field and definitely wasn't part of the original plan.</td>
+      <td>writer_boy</td>
+      <td>2023-04-13 20:10:38</td>
+      <td>35</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.9517</td>
+      <td>0.001236</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>jg5bc2b</td>
+      <td>NaN</td>
+      <td>From another article (https://roughdraftatlanta.com/2023/03/01/beltline-streetcar-expansion-is-moving-forward-despite-concerns-from-businesses-residents/):\n\n&gt;Fred Duncan, who lives near the Beltline, represents about 350 homeowners who live along the proposed route who oppose the project. The streetcar extension would cut through a historic area with narrow streets and disrupt the quality of life of these hundreds of homeowners, he said.  \n&gt;  \n&gt;“Atlanta is a car city,” he said. “The streetcar causes traffic backups now. Spending $230 million for 2.3 miles is a total waste of money. This project has been a huge albatross since its inception.”\n\n&amp;#x200B;\n\n&gt;Julia Neighbors, a member of the Historic District Development Corporation, which owns Haugabrooks Funeral Home, said she lives on Randolph Street. She said MARTA’s community outreach has been “performative” to only reach a broad spectrum of the community impressed by the “sexy, vanity project.”  \n&gt;  \n&gt;Property owners along the route — those in the community directly   \nimpacted by the extension — have been largely left out of the   \nconversation, she said.\n\n&amp;#x200B;\n\n&gt;Mike Greene, senior vice president of Portman Holdings, said his company has invested about $220 million to build the mixed-use office building Junction Krog District at 667 Auburn Ave. on the Eastside Trail and the purchase of about an acre of property across the street. The streetcar route is planned to run between the two sites.  \n&gt;  \n&gt;“What attracted us to the Beltline, like other developers, is the  pedestrian activity and not necessarily that there would be transit there,” Greene said.  \n&gt;  \n&gt;“Most of us \[developers\] believed transit was pie in the sky,” he added, to audible gasps from some in the audience.\n\nMmm, the tears of unfathomable sadness</td>
+      <td>PacinoWig</td>
+      <td>2023-04-13 17:20:44</td>
+      <td>70</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.0516</td>
+      <td>0.002263</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>jg5pjxt</td>
+      <td>NaN</td>
+      <td>People who are opposed to this can fuck off. The whole point of the beltline was to run a streetcar around it. If they’re so afraid of transit, maybe they can move out to Forsyth County. We live in a city, and we need the infrastructure of a city. You can’t complain about traffic and then say “Atlanta is a car city.” If you don’t want traffic, don’t live in a big city. Atlanta quite honestly could support much more transit; the density is there for a robust light rail system at the LEAST (think something similar to the system they are building in [Seattle](https://www.soundtransit.org/system-expansion)). It’s a damn shame we can’t do something like that here, and it’s because we delude ourselves into listening to people who believe inner city neighborhoods are suburbs.</td>
+      <td>thesouthdotcom</td>
+      <td>2023-04-13 19:01:21</td>
+      <td>55</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.0883</td>
+      <td>0.009833</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>jg5frr9</td>
+      <td>NaN</td>
+      <td>The whole point was to have transit. Let them squirm.</td>
+      <td>FEMA_Camp_Survivor</td>
+      <td>2023-04-13 17:50:37</td>
+      <td>37</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.007973</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>jg5wdwu</td>
+      <td>NaN</td>
+      <td>Atlanta needs something that ties it together. This project should go forward.</td>
+      <td>NaN</td>
+      <td>2023-04-13 19:51:33</td>
+      <td>13</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.979767</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>jg9b9lm</td>
+      <td>NaN</td>
+      <td>&gt;"I don't think anyone here is against affordable housing," said one neighbor. "That location is not built for it. **The street is not set up for that.**"\n\nLol, they use this line for everything.</td>
+      <td>HabeshaATL</td>
+      <td>2023-04-14 14:03:32</td>
+      <td>7</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4215</td>
+      <td>0.001262</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>jg5cnwp</td>
+      <td>NaN</td>
+      <td>The NIMBYs won't stop, so if you don't think like them, make sure your voice is just as loud.  They've got theirs and they don't care if you don't get what you want.</td>
+      <td>Bobgoulet</td>
+      <td>2023-04-13 17:29:31</td>
+      <td>34</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.0644</td>
+      <td>0.135140</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>jg5n6hn</td>
+      <td>NaN</td>
+      <td>&gt;They argue the streetcar could also ruin the experience of using the hugely popular and crowded path, they say.\n\nAh yes, my favorite experience is the east side beltline. I can see wondrous things like: people with 20 ft dog leads blocking the entire path; drunk people shouting and sometimes just standing around; people driving go karts for some reason; man-going-to-fast-on-electric-skateboard; people who drove from the suburbs to jog; and tourists. A wondrous mix! Truly this street car will somehow wreck that.</td>
+      <td>NaN</td>
+      <td>2023-04-13 18:44:02</td>
+      <td>35</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0989</td>
+      <td>0.005301</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>jg84rie</td>
+      <td>NaN</td>
+      <td>This needs to happen even as a symbol.  if Atlanta wants to be continue growing while maintaining a positive living experience for residents. Look at what DC is doing with there metro.</td>
+      <td>Decent_Scholar_3250</td>
+      <td>2023-04-14 09:22:49</td>
+      <td>6</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.6486</td>
+      <td>0.916014</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>jg531e1</td>
+      <td>NaN</td>
+      <td>The beltline was originally approved to be built around a walking trail and transit corridor. If they shoot down the streetcar then the beltline should be torn up and scrapped completely.</td>
+      <td>The_Federal</td>
+      <td>2023-04-13 16:27:10</td>
+      <td>58</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.1531</td>
+      <td>0.000289</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>jg6n2mr</td>
+      <td>NaN</td>
+      <td>To the surprise of no one.</td>
+      <td>NaN</td>
+      <td>2023-04-13 23:21:11</td>
+      <td>3</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.0258</td>
+      <td>0.044689</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>jg84ayd</td>
+      <td>NaN</td>
+      <td>I'd be all for it if they would make the street car not suck so bad. It should have had a dedicated lane all along.</td>
+      <td>PippyLongSausage</td>
+      <td>2023-04-14 09:19:18</td>
+      <td>3</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.0220</td>
+      <td>0.002374</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>jg5xl0j</td>
+      <td>NaN</td>
+      <td>The ‘opposition’ needs to fuck off.</td>
+      <td>GeorgiaOregonTexas</td>
+      <td>2023-04-13 20:00:34</td>
+      <td>6</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.5423</td>
+      <td>0.003888</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>jg5p8re</td>
+      <td>NaN</td>
+      <td>Honestly what’s wrong with a bike? I really like being able to walk on the belt line and how it feels like a “park”\n\nI’m a big car guy and pro transit of any type. Trials are for walking, not public transit. You can bike if you must. Why not some bus that stops at the front doors of the businesses that backup to the belt line.</td>
+      <td>BIGJake111</td>
+      <td>2023-04-13 18:59:04</td>
+      <td>-28</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.5975</td>
+      <td>0.008886</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>jg5hjp2</td>
+      <td>NaN</td>
+      <td>[deleted]</td>
+      <td>NaN</td>
+      <td>2023-04-13 18:02:58</td>
+      <td>-7</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.000731</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>jg6zqaz</td>
+      <td>NaN</td>
+      <td>$250,000,000 / 500,000 = $500 per city resident. Savannah has at least what looks like a trolley. A real bell and also able to turn. No ridiculous overhead power lines and tracks that stay put. No special machinery. No construction. Much harder to steal money from though.</td>
+      <td>HeydaydayHey</td>
+      <td>2023-04-14 01:27:45</td>
+      <td>-10</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.7269</td>
+      <td>0.006646</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>jg5eqr3</td>
+      <td>NaN</td>
+      <td>So while this plan is obviously terrible and should be dropped, I absolutely *cannot wait* for all of the young professional urbanism enjoyers who were happy to get their dense walkable $3000/month apartment units along the Beltline to be drawn to the NIMBY dark side when streetcars are running round the clock a dozen or so feet from their bedroom.</td>
+      <td>NaN</td>
+      <td>2023-04-13 17:43:37</td>
+      <td>-46</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.3109</td>
+      <td>0.942492</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>jg5c5iq</td>
+      <td>jg5b9y4</td>
+      <td>If it goes as planned, yes you will be able to do that.</td>
+      <td>Bobgoulet</td>
+      <td>2023-04-13 17:26:06</td>
+      <td>82</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4019</td>
+      <td>0.999524</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>jg64ntj</td>
+      <td>jg5b9y4</td>
+      <td>It'll get you close (Centennial Olympic Park). If you want to get right up to the stadiums, though, we'll need to extend the route west, which, unfortunately, is not one of MARTA's priorities at the moment.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 20:54:36</td>
+      <td>14</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.1027</td>
+      <td>0.012621</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>jg8eago</td>
+      <td>jg5b9y4</td>
+      <td>If they just put the street car back on Ponce you could ride that to North Ave station then down</td>
+      <td>NaN</td>
+      <td>2023-04-14 10:30:05</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.001997</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>jg6moqc</td>
+      <td>jg5b9y4</td>
+      <td>You would have to transfer at five points and ride the subway to vine city.</td>
+      <td>rontonsoup__</td>
+      <td>2023-04-13 23:17:49</td>
+      <td>-4</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.013829</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>jg58ag8</td>
+      <td>jg51z7v</td>
+      <td>Woohoo!</td>
+      <td>Eggsaladprincess</td>
+      <td>2023-04-13 17:00:44</td>
+      <td>33</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.5562</td>
+      <td>0.985143</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>jg52vrn</td>
+      <td>jg51dtf</td>
+      <td>&gt; secluded suburban lifestyles to choose from ~~in this state~~ ITP\n\nYou don't have to go far</td>
+      <td>otpen15</td>
+      <td>2023-04-13 16:26:08</td>
+      <td>127</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.996666</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>jg8hlic</td>
+      <td>jg754li</td>
+      <td>You can be against this without being a selfish fuckwit. I'm all for transit, don't like cars, and think transit should definitely connect to the Beltline. I'd be for this if I thought people would use it.\n\nThe route on the Beltline is going to have multiple pedestrian crosswalks and 3 stops within 1.3 miles. I imagine the top speed will be something like 25 mph with an average speed more like 10 mph. Electric scooters go that fast with far less footprint, environmental impact, cost, you don't have to wait 15 minutes between busses, etc. \n\nThe existing streetcar went 50% over budget and has average daily weekday ridership of only 300. Again, I love transit, but the existing streetcar has been a failure. I don't see the combined line, going from PCM to GSU, as fulfilling a need the city has. I could change my mind if I can see costs &amp; timelines for having transit around the entire Beltline.\n\nIf we're going to pave more land next to the Beltline, make a lane for faster users. Bikes, scooters, ebikes, one wheels, etc. The Beltline's biggest problem is its own success. Using it to commute sucks now.</td>
+      <td>butterfly_butts</td>
+      <td>2023-04-14 10:52:10</td>
+      <td>-8</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.5481</td>
+      <td>0.001370</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>jg59dfr</td>
+      <td>jg4zx93</td>
+      <td>[removed]</td>
+      <td>NaN</td>
+      <td>2023-04-13 17:07:45</td>
+      <td>52</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.006519</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>jg8twrd</td>
+      <td>jg4zx93</td>
+      <td>&gt;Critics including the Old Fourth Ward Streetcar Impact Team say Beltline rail could pose safety risks and construction headaches.\n\nWait until they find out how dangerous cars are and how many headaches "roads" cause.</td>
+      <td>kneedrag</td>
+      <td>2023-04-14 12:11:35</td>
+      <td>15</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.3400</td>
+      <td>0.000950</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>jg5t7ek</td>
+      <td>jg4zx93</td>
+      <td>The ol’ OFWSIT</td>
+      <td>irishgator2</td>
+      <td>2023-04-13 19:28:03</td>
+      <td>10</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.034504</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>jg5qutf</td>
+      <td>jg5l3m2</td>
+      <td>I wish our local politicians would just do what they were elected to do and stop with these community input meetings that both delays projects and makes them more expensive</td>
+      <td>420everytime</td>
+      <td>2023-04-13 19:10:54</td>
+      <td>21</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.1280</td>
+      <td>0.000603</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>jg8u6u9</td>
+      <td>jg5ywoc</td>
+      <td>&gt;  keep the beltline inaccessible as well as their personal little oasis\n\nding ding ding! winner</td>
+      <td>kneedrag</td>
+      <td>2023-04-14 12:13:24</td>
+      <td>4</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7345</td>
+      <td>0.003526</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>jg5djo6</td>
+      <td>jg5bc2b</td>
+      <td>Do they know the historic neighborhoods of Inman Park, Poncey Highlands, Candler Park, Druid Hills, etc used to have a street car that went down those narrows streets. The street car is one of the reasons those neighbors grew.</td>
+      <td>Pete_Bell</td>
+      <td>2023-04-13 17:35:30</td>
+      <td>100</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.990190</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>jg5dwju</td>
+      <td>jg5bc2b</td>
+      <td>I've gotten the impression that it's not 350 homeowners opposed to the streetcar, but 3-5 people with a few sock puppet accounts on Urbanize and here who claim to represent all of O4W.</td>
+      <td>scarabbrian</td>
+      <td>2023-04-13 17:37:54</td>
+      <td>51</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.1154</td>
+      <td>0.006803</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>jg6svbj</td>
+      <td>jg5bc2b</td>
+      <td>&gt;“Atlanta is a car city,” he said.\n\nHow much to punch this guy in the solar plexus?  🤬 Grumble grumble is-ought bullshit grumble grumble...</td>
+      <td>Mmngmf_almost_therrr</td>
+      <td>2023-04-14 00:14:33</td>
+      <td>27</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.5859</td>
+      <td>0.001184</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>jg62ntz</td>
+      <td>jg5bc2b</td>
+      <td>I may be one voice, but I'll speak as a resident impacted by *not* expanding the route east and onto the BeltLine. I want it. I want more high-capacity transit, and trip options. I want all the apartments, condos, jobs, classrooms, historic sites, and everything else to have that access too. We can not let our loudest nay-sayers dictate every action that alters the status-quo. If we did, we wouldn't even have a BeltLine. Hell, we wouldn't even have MARTA.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 20:39:17</td>
+      <td>25</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.7227</td>
+      <td>0.916558</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>jg5ndim</td>
+      <td>jg5bc2b</td>
+      <td>I mean the Beltline was planned to distance Atlanta from one of the most car-centric city in the us? \nThr original plan had public transits and I hope the beltline gets it.</td>
+      <td>curaga12</td>
+      <td>2023-04-13 18:45:28</td>
+      <td>19</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.6369</td>
+      <td>0.983698</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>jg8q3u1</td>
+      <td>jg5bc2b</td>
+      <td>I don't even know what to think about developers believing that transit would never happen. Either they weren't paying attention or were just hoping they could buy up the space next to the trail for their own use.</td>
+      <td>MarkyDeSade</td>
+      <td>2023-04-14 11:47:03</td>
+      <td>6</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4215</td>
+      <td>0.000398</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>jg85bgf</td>
+      <td>jg5n6hn</td>
+      <td>Honestly they need the streetcar and a separate bike and scooter lane? Thoughts?</td>
+      <td>Decent_Scholar_3250</td>
+      <td>2023-04-14 09:26:57</td>
+      <td>4</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.5204</td>
+      <td>0.005973</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>jg5y2r3</td>
+      <td>jg5n6hn</td>
+      <td>Happy to rag on the anti transit folks, but the east side Beltline is fun and good</td>
+      <td>Scrubadubdub83</td>
+      <td>2023-04-13 20:04:19</td>
+      <td>13</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.8750</td>
+      <td>0.999865</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>jg59rkx</td>
+      <td>jg531e1</td>
+      <td>I know it’s a minority opinion, but I’m there with you. This was not intended to be a brunch delivery path. The original intent of the beltline (back in original thesis days) was to help people in lower income areas quickly, easily, and cheaply transit to jobs in wealthier parts of ATL. The walking/biking was supposed to be an add on benefit.</td>
+      <td>alpacasarebadsingers</td>
+      <td>2023-04-13 17:10:20</td>
+      <td>65</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.9587</td>
+      <td>0.019445</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>jg8r9ez</td>
+      <td>jg84ayd</td>
+      <td>A dedicated lane is on the City of Atlanta to make it happen.</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 11:54:26</td>
+      <td>4</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4588</td>
+      <td>0.998553</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>jg5u6lm</td>
+      <td>jg5p8re</td>
+      <td>Do you think the transit will be ON the current bike path?</td>
+      <td>irishgator2</td>
+      <td>2023-04-13 19:35:14</td>
+      <td>23</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.010173</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>jg7fwfs</td>
+      <td>jg5p8re</td>
+      <td>The beltline was primarily designed as a rail transit corridor on former rail lines. The trail was an added bonus. Read Ryan’s original thesis &amp; the original charter for the project</td>
+      <td>ATLtinyrick</td>
+      <td>2023-04-14 05:04:05</td>
+      <td>8</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7964</td>
+      <td>0.994067</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>jg5rlvb</td>
+      <td>jg5p8re</td>
+      <td>Not everyone can walk or bike.  Sometimes the weather doesn't cooperate. Sometimes people need to get where they're going in a timely manner, this isn't a nature trail, its a transit route meant to connect neighborhoods around the city.  There is plenty of land around the city to create parks and nature trails for people to walk on that will never be disturbed by transit.\n\nBigger picture if we want transit expansion in Atlanta, we have to understand that incremental projects like this are going to be a part of that.  People seem to want to snap and magically see new rail lines appear, but in reality cities (especially in the US) build out networks a few miles at a time.</td>
+      <td>NaN</td>
+      <td>2023-04-13 19:16:25</td>
+      <td>22</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4926</td>
+      <td>0.993734</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>jg5r3gu</td>
+      <td>jg5p8re</td>
+      <td>The east side beltline is more than just a trail. It’s a car free road with hundreds of houses and restaurants\n\nBuilding transit where people live is necessary and many people live there</td>
+      <td>420everytime</td>
+      <td>2023-04-13 19:12:39</td>
+      <td>25</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.5106</td>
+      <td>0.992365</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>jg5vojx</td>
+      <td>jg5p8re</td>
+      <td>You can still bike. The existing trails are not affected.\n\n\&gt; Why not some bus that stops at the front doors of the businesses that backup to the belt line.\n\nThis is like, exactly what we're doing. Just light rail instead of busses.</td>
+      <td>rco8786</td>
+      <td>2023-04-13 19:46:18</td>
+      <td>11</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.3278</td>
+      <td>0.240133</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>jg5jfmy</td>
+      <td>jg5hjp2</td>
+      <td>So we don't expand it to actually be useful to be used by both?</td>
+      <td>MattCW1701</td>
+      <td>2023-04-13 18:16:46</td>
+      <td>10</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.1715</td>
+      <td>0.000338</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>jg7o95s</td>
+      <td>jg6zqaz</td>
+      <td>$500 seems like a bargain for a transit system from nothing. Thanks for putting it that way.</td>
+      <td>alpacasarebadsingers</td>
+      <td>2023-04-14 06:54:08</td>
+      <td>15</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.2249</td>
+      <td>0.008781</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>jg85qup</td>
+      <td>jg6zqaz</td>
+      <td>Okay, and then we have light rail for generations to come. Just like any other infrastructure.</td>
+      <td>killroy200</td>
+      <td>2023-04-14 09:30:13</td>
+      <td>4</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.5267</td>
+      <td>0.999340</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>jg64iaf</td>
+      <td>jg5eqr3</td>
+      <td>Oh no! Not... frequent, convenient, modern, high-capacity transit readily available in the densifying, active-transportation corridor that was literally built to accommodate it...\n\nYeah. I'm sure people will be sooooo upset.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 20:53:25</td>
+      <td>24</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.1511</td>
+      <td>0.006689</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>jg5irgr</td>
+      <td>jg5eqr3</td>
+      <td>Modern light rail is really quiet, and the trains don't run 24/7...</td>
+      <td>MoreLikeWestfailia</td>
+      <td>2023-04-13 18:11:52</td>
+      <td>39</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.029235</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>jg5kzhf</td>
+      <td>jg5eqr3</td>
+      <td>Maybe they like living in the city and all that comes with it.</td>
+      <td>Devium44</td>
+      <td>2023-04-13 18:27:56</td>
+      <td>20</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.3612</td>
+      <td>0.100791</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>jg5r2f1</td>
+      <td>jg5eqr3</td>
+      <td>Yes, because all of those young professionals hate NYC and Chicago so much. As do all of those damn Europeans in their cities. And Koreans. And Japanese.\n\nMass transit is spectacular for dense urban cities.</td>
+      <td>HippoDripopotamus</td>
+      <td>2023-04-13 19:12:26</td>
+      <td>21</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.5719</td>
+      <td>0.998820</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>jg5vas3</td>
+      <td>jg5eqr3</td>
+      <td>You sound like a lovely person</td>
+      <td>rco8786</td>
+      <td>2023-04-13 19:43:28</td>
+      <td>6</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7430</td>
+      <td>0.999869</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>jg5xaxk</td>
+      <td>jg5eqr3</td>
+      <td>They can move. This is good and necessary and everyone opposed to it can fuck off</td>
+      <td>arbrebiere</td>
+      <td>2023-04-13 19:58:29</td>
+      <td>10</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.1531</td>
+      <td>0.999508</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>jg5wdqa</td>
+      <td>jg5c5iq</td>
+      <td>but tbh this is not a sustainable and promising way to conjure up regular everyday transit riders.  Events at stadiums are not an everyday occurance, nor is going to PCM, and nor is going to both in the same trip without other destinations in mind.  We should not be building transit to cater to occasional visitors and eventgoers who can finally take their trip from stadium to food hall.  We need to be connecting where people live and where people live.</td>
+      <td>joe2468conrad</td>
+      <td>2023-04-13 19:51:31</td>
+      <td>-29</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.4380</td>
+      <td>0.001315</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>jg8cztk</td>
+      <td>jg6moqc</td>
+      <td>Or just walk from the Centennial Park stop.</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 10:21:26</td>
+      <td>5</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.2960</td>
+      <td>0.796102</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>jg58nh6</td>
+      <td>jg52vrn</td>
+      <td>Literally a few streets over ffs</td>
+      <td>Oddity_Odyssey</td>
+      <td>2023-04-13 17:03:05</td>
+      <td>88</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.5859</td>
+      <td>0.097216</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>jg8vnc4</td>
+      <td>jg8hlic</td>
+      <td>The New York City subway has an average speed of 17mph. In Manhattan there is often 4 stops in one mile.   \n3 stops in 1.3 miles is not too many and 10-25mph is not too slow.</td>
+      <td>splogic</td>
+      <td>2023-04-14 12:22:51</td>
+      <td>11</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.2960</td>
+      <td>0.989677</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>jga5tju</td>
+      <td>jg8hlic</td>
+      <td>though i will concede that the quick surge of l.i.t rentals (e-bikes and scooters) over the past few years has indeed changed the mobility landscape, i do not agree that they compete with this *original* vision of a train corridor.\n\nmultiple options are great &amp; even necessary to counteract our embedded car culture, but i wonder if you're not forgetting about disabled, elderly and kids and anyone else who would/should be able to use the light rail.\n\nthe downtown streetcar is still in Phase One, with a steep learning/adoption curve and  plenty of hard lessons. its three biggest issues, imo:\n\n* it was not given exclusive right-of-way on city streets\n* it  wasn't marketed well as the first of several phases to transform our core city \n* it stopped expanding ~~slowly~~ so people (naturally?) think the early/current numbers can *easily* be used in arguments against it.\n\nthis first Beltline extension will address those issues in various ways and hopefully snowball into a complete 22-mi loop around central Atl.\n\nbuses can supplement  but they are no replacement for surface-level rail transit. (until Marta can prove it's capable of running true BRT, which it hasn't even tried yet despite pushing for it as a better substitute).\n\n*edit: minor rev. for clarity*</td>
+      <td>atl_cracker</td>
+      <td>2023-04-14 17:27:35</td>
+      <td>6</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7113</td>
+      <td>0.007833</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>jg8u4i9</td>
+      <td>jg8hlic</td>
+      <td>Its almost like you have to slowly build out infrastructure over time and you don't get to drop in a complete system overnight. Wild concept.</td>
+      <td>kneedrag</td>
+      <td>2023-04-14 12:12:59</td>
+      <td>9</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4626</td>
+      <td>0.874379</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>jg649qj</td>
+      <td>jg59dfr</td>
+      <td>He'll work remotely from Boca Raton though</td>
+      <td>gsfgf</td>
+      <td>2023-04-13 20:51:35</td>
+      <td>18</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.120925</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>jg8vsjz</td>
+      <td>jg8twrd</td>
+      <td>OFWSIT on cars: *crickets*</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 12:23:47</td>
+      <td>5</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.032146</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>jg62xan</td>
+      <td>jg5qutf</td>
+      <td>To be clear, Councilman Farokhi has been a firm voice, if not for the streetcar extension, then at least transit on the BeltLine. The Mayor's office, for all their issues, has been a firm voice for light rail on the BeltLine, including fighting back MARTA efforts to pursue buses instead. There are political forces pushing BeltLine rail forward; we just get to hear all the whining from NIMBYs in the mean time.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 20:41:16</td>
+      <td>28</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.2023</td>
+      <td>0.990376</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>jg672q5</td>
+      <td>jg5djo6</td>
+      <td>They are literally called *streetcar suburbs*, because they were built around streetcar service.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 21:13:02</td>
+      <td>37</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.031308</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>jg5knjw</td>
+      <td>jg5djo6</td>
+      <td>They don’t want the neighborhood to grow.</td>
+      <td>Devium44</td>
+      <td>2023-04-13 18:25:30</td>
+      <td>36</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0772</td>
+      <td>0.000294</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>jg5tt0k</td>
+      <td>jg5djo6</td>
+      <td>Please, bring it back to Decatur! We have transit, but we’ll take more!  Especially if it connects us to Emory</td>
+      <td>irishgator2</td>
+      <td>2023-04-13 19:32:29</td>
+      <td>16</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.3036</td>
+      <td>0.076754</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>jg67xjp</td>
+      <td>jg5dwju</td>
+      <td>It's a bunch of homeowners but in like Alpharetta.  Don't worry, we're not going to spend millions of dollars to get you a train station you don't want.</td>
+      <td>gsfgf</td>
+      <td>2023-04-13 21:19:38</td>
+      <td>11</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7207</td>
+      <td>0.990858</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>jg6vpiy</td>
+      <td>jg6svbj</td>
+      <td>As an excuse to not have transit, he's 100% wrong, but as a description of the current and near-future state of the city? 100% right.</td>
+      <td>MattCW1701</td>
+      <td>2023-04-14 00:43:25</td>
+      <td>8</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.2263</td>
+      <td>0.948645</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>jg6848t</td>
+      <td>jg62ntz</td>
+      <td>When the opposition’s arguments are “but we like cars” and “sure they told us about transit when we bought here, but we didn’t think they’d do it” I’m not as concerned. As Mr. Roy says, These are not serious people.\n\nOnce there is a trolley on this section people will complain there isn’t a trolley on their section.</td>
+      <td>alpacasarebadsingers</td>
+      <td>2023-04-13 21:21:02</td>
+      <td>20</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.4619</td>
+      <td>0.001323</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>jg7c2fi</td>
+      <td>jg5ndim</td>
+      <td>Correct, anyone who developed or moved near the beltline were made aware of the intentions.  Shouldn’t be a surprise.</td>
+      <td>Zgdaf</td>
+      <td>2023-04-14 04:08:35</td>
+      <td>8</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.2732</td>
+      <td>0.002197</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>jg8s00r</td>
+      <td>jg8q3u1</td>
+      <td>&gt; were just hoping they could buy up the space next to the trail for their own use.\n\nProbably this, otherwise it takes a lot of ignorance on their part which I don't see here.</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 11:59:09</td>
+      <td>3</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0772</td>
+      <td>0.000410</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>jg8r6th</td>
+      <td>jg85bgf</td>
+      <td>Not enough ROW.</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 11:53:58</td>
+      <td>5</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.004546</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>jg9k1in</td>
+      <td>jg5y2r3</td>
+      <td>Thankfully, a streetcar isn't going to affect the fun and good parts or the funny and bad parts.</td>
+      <td>NaN</td>
+      <td>2023-04-14 15:00:45</td>
+      <td>3</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.8126</td>
+      <td>0.003315</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>jg68eqw</td>
+      <td>jg5y2r3</td>
+      <td>It’s a wild ride, to be sure</td>
+      <td>alpacasarebadsingers</td>
+      <td>2023-04-13 21:23:13</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.3182</td>
+      <td>0.999801</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>jg7hz54</td>
+      <td>jg59rkx</td>
+      <td>Didn't know that was the original purpose of the beltline. So it's crazy to see that it's now a selling point for expensive/overpriced properties</td>
+      <td>c_rizzle53</td>
+      <td>2023-04-14 05:33:28</td>
+      <td>5</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.0972</td>
+      <td>0.143960</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>jg5xyv1</td>
+      <td>jg5u6lm</td>
+      <td>I think it’s in the same right of way and I think that’s a mistake. It should sever the other side of the businesses and homes that back to the beltline and keep the beltline as a nature/walking/biking trail as commercialized as it may be. It’s the east sided back yard and no one wants a trolly running through their backyard, it should run through their front yard.</td>
+      <td>BIGJake111</td>
+      <td>2023-04-13 20:03:30</td>
+      <td>-14</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.5574</td>
+      <td>0.001063</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>jg5xobu</td>
+      <td>jg5rlvb</td>
+      <td>There is very little land in the middle of things that is as serene as the belt line. I view it as a “backyard” for all the businesses and rentals and homes along it. Why can’t we keep the cars and transit on the “front” side of the businesses.\n\nI’m all for transit expansion but nature preservation, especially in high dollar urban centers is going to be harder to achieve long term.</td>
+      <td>BIGJake111</td>
+      <td>2023-04-13 20:01:17</td>
+      <td>-11</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.2500</td>
+      <td>0.005550</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>jg5xi70</td>
+      <td>jg5r3gu</td>
+      <td>Again, why can’t the bus stop at the front door and the belt line be the “back yard.” Transit will ruin the nature and park feel of the east side of the belt line which makes Atlanta so unique.</td>
+      <td>BIGJake111</td>
+      <td>2023-04-13 20:00:00</td>
+      <td>-12</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.7184</td>
+      <td>0.000364</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>jg5y3ha</td>
+      <td>jg5vojx</td>
+      <td>The rail in the back side of businesses ruins the pedestrian nature atmosphere of the trail. Buses stopping at the front of the businesses is a good alternative to people who need to transit in a less carbon neutral way.</td>
+      <td>BIGJake111</td>
+      <td>2023-04-13 20:04:29</td>
+      <td>-3</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.1531</td>
+      <td>0.955731</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>jg6uele</td>
+      <td>jg5jfmy</td>
+      <td>I'm disappointed that this guy deleted his comments, they were really fuckin' funny  🤣🤣🤣</td>
+      <td>Mmngmf_almost_therrr</td>
+      <td>2023-04-14 00:29:52</td>
+      <td>2</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0202</td>
+      <td>0.000385</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>jge0oij</td>
+      <td>jg7o95s</td>
+      <td>And over 40 years "for only 3 pennies a day..."</td>
+      <td>NaN</td>
+      <td>2023-04-15 14:45:42</td>
+      <td>2</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.015448</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>jg8ax2k</td>
+      <td>jg7o95s</td>
+      <td>There is a transit system in place. Could  have been as cheap as a bus practically. With much less maintenance costs. And reliability. Could have used the money for bus stops that aren’t cinder blocks seats or lawn chairs.</td>
+      <td>HeydaydayHey</td>
+      <td>2023-04-14 10:07:18</td>
+      <td>0</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.3612</td>
+      <td>0.000722</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>jg8b4i8</td>
+      <td>jg85qup</td>
+      <td>Sending future dollars on maintenance is no way to grow a functional system. Although I understand your desire to have a frivolous trolley system, since you personally live on the trolley line.</td>
+      <td>HeydaydayHey</td>
+      <td>2023-04-14 10:08:42</td>
+      <td>-1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.1280</td>
+      <td>0.000358</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>jg5rp43</td>
+      <td>jg5irgr</td>
+      <td>This guy actually thinks Marta has enough funding to run 24/7 😂\n\nI live near I-75 and that’s actually annoying to hear all of the time. \n\nThe only times I don’t hear the highway in my backyard is when there’s so much traffic that the cars can’t go fast enough</td>
+      <td>420everytime</td>
+      <td>2023-04-13 19:17:04</td>
+      <td>28</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.4019</td>
+      <td>0.001382</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>jg6k9u5</td>
+      <td>jg5kzhf</td>
+      <td>Given what I see of property values near MARTA lines, I think it's doubtful, but if this ever comes to fruition, it will be interesting to see for sure!</td>
+      <td>NaN</td>
+      <td>2023-04-13 22:57:05</td>
+      <td>-10</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7871</td>
+      <td>0.997669</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>jg5t8q1</td>
+      <td>jg5r2f1</td>
+      <td>NYC and Chicago are a different caliber of city, sorry. Apples to oranges. You said it yourself: "Dense urban cities"</td>
+      <td>NaN</td>
+      <td>2023-04-13 19:28:20</td>
+      <td>-13</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.0772</td>
+      <td>0.002690</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>jg6hikn</td>
+      <td>jg5vas3</td>
+      <td>Thanks!</td>
+      <td>NaN</td>
+      <td>2023-04-13 22:34:23</td>
+      <td>-3</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4926</td>
+      <td>0.999817</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>jg5zbqw</td>
+      <td>jg5wdqa</td>
+      <td>There are literally thousands of apartments and jobs in and around both PCM and downtown.  Why even make arguments like this?</td>
+      <td>NaN</td>
+      <td>2023-04-13 20:13:50</td>
+      <td>82</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.0516</td>
+      <td>0.004213</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>jg5xnl4</td>
+      <td>jg5wdqa</td>
+      <td>Highlands -&gt; Inman Park &gt; Old 4th Ward &gt; Georgia State &gt; Downtown are all where people live of where people are going to beliving soon.  Besides, gotta start somewhere.</td>
+      <td>Bobgoulet</td>
+      <td>2023-04-13 20:01:07</td>
+      <td>47</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.028992</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>jg9fy8j</td>
+      <td>jg8vnc4</td>
+      <td>I'm not complaining about the number of stops. I'm saying that this will compete with scooters, bikes and walking as people's options to move along the Beltline. Taking the train won't save meaningful time for that stretch. I imagine ridership would be comparable whether the train went all the way to PCM vs stopping at Irwin.\n\nThe top comment on this post is the only comment I see where someone is saying they personally want this service, and then only for special occasions. I just can't believe that this is Marta's best option for how to spend that much money.\n\nDoes anyone know why they're pushing this to be light rail instead of a bus? The current streetcar operation cost $90 million to build the infrastructure and get 4 trolleys. When they shut down the trolleys for 4 months for $7.5 million in repairs, they replaced them with vans. They could have always used the vans, made rides free forever, saved \~$95 million, retained the flexibility to change routes when needed, not messed up the streets for bikers, etc. The trolleys seem worse in every way.</td>
+      <td>butterfly_butts</td>
+      <td>2023-04-14 14:34:10</td>
+      <td>0</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.8919</td>
+      <td>0.002671</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>jg8uhvi</td>
+      <td>jg62xan</td>
+      <td>Farokhi needs to push harder to fix the current streetcar's issues that the city controls (dedicated lanes, signal priority, etc.), as that's sinking the whole route.</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 12:15:22</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.000474</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>jg6bm50</td>
+      <td>jg672q5</td>
+      <td>You probably know this, but the rhythm of small commercial center to residential to small commercial, and so forth is all because of the former streetcar stops. This is why the Eastside, in-town neighborhoods are so charming and popular.</td>
+      <td>Pete_Bell</td>
+      <td>2023-04-13 21:47:38</td>
+      <td>28</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.9000</td>
+      <td>0.999547</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>jg65tb1</td>
+      <td>jg5tt0k</td>
+      <td>Emory, CDC, and GA Tech not having a direct train stop is disgraceful.</td>
+      <td>Pete_Bell</td>
+      <td>2023-04-13 21:03:31</td>
+      <td>25</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.2960</td>
+      <td>0.001203</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>jg6dlgg</td>
+      <td>jg6848t</td>
+      <td>Yes</td>
+      <td>Alligatorpedro</td>
+      <td>2023-04-13 22:03:02</td>
+      <td>5</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4019</td>
+      <td>0.999781</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>jg8wd0y</td>
+      <td>jg7c2fi</td>
+      <td>&gt; were made aware of the intentions\n\nOr is just that ignorant.</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 12:27:29</td>
+      <td>3</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.2732</td>
+      <td>0.005506</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>jgdfjzm</td>
+      <td>jg9k1in</td>
+      <td>Actually it will. That section of the beltline has become something of a boardwalk. Trolleys are always dangerous unless they have separate  enclosed routes. (A trolley death was just announced in San Diego.)  The current design offers no real safeguards. The trolley was part of the original design and funding -- not anticipating the trail would be wildly popular with residents of Midtown or that Midtown occupancy would explode around it. The route (without dedicated right of way on Irwin St) will constantly be stuck in traffic. Use will be limited to tourists coming from downtown -- sponsored by bar owners --and a few people who live along the route. \n (The existing trolley has ridership levels that don't support its operation.) What I don't understand is who the people are on this sub and others so relentlessly in favor of the east side beltline trolley routes. Are they so opposed to Midtown residents that they want to ruin a good thing?  Are they bar and restaurant owners hoping for an infusion of tourists from downtown hotels? I just don't understand. We live on the other side of Piedmont Park and have used the Eastside trail since before it was officially opened. Implementing the trolley route plan simply ignores the current situation.</td>
+      <td>Virtualdrama</td>
+      <td>2023-04-15 12:17:26</td>
+      <td>-2</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.2856</td>
+      <td>0.000343</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>jgacyhh</td>
+      <td>jg9k1in</td>
+      <td>True true</td>
+      <td>Scrubadubdub83</td>
+      <td>2023-04-14 18:19:27</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.6808</td>
+      <td>0.999871</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>jg5zpi8</td>
+      <td>jg5xyv1</td>
+      <td>It’s not in the same right of way</td>
+      <td>wild-bill</td>
+      <td>2023-04-13 20:16:48</td>
+      <td>10</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.000595</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>jg5yfep</td>
+      <td>jg5xobu</td>
+      <td>I guarantee you the beltline was also not "serene" 10-15 years ago before the trail was built.</td>
+      <td>NaN</td>
+      <td>2023-04-13 20:07:00</td>
+      <td>22</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.2500</td>
+      <td>0.001819</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>jg5xw18</td>
+      <td>jg5xi70</td>
+      <td>You’re acting like NIMBYs wouldn’t also complain about a beltline bus lane. \n\nIf you’re talking about a bus that would get stuck in traffic, then it wouldn’t be much more useful than just driving yourself</td>
+      <td>420everytime</td>
+      <td>2023-04-13 20:02:54</td>
+      <td>19</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.2944</td>
+      <td>0.010200</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>jg63wgv</td>
+      <td>jg5xi70</td>
+      <td>The BeltLine was literally designed and built to accommodate transit. Transit *is* the nature of the BeltLine. From the start.\n\nI've seen the proposals for street-level BRT as an alternative and... they are *baaaaad*. Horrendously disjointed and jagged as they try to force follow a corridor that has no equivalent. The utility of the BeltLine, for both transit and active transportation alike, is its unique route and general separation from the streets. It means transit can flow much more smoothly than if it was trying to cover the same general area on the road.\n\nNot to mention how the BeltLine *is* the front door for so much of the growth along the area, or at least a very busy secondary entrance. As others have said, the BeltLine has thousands of homes and jobs along it. All in dense, walkable, bikeable formats, which are exactly what you want for transit to be useful.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 20:48:44</td>
+      <td>15</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.2732</td>
+      <td>0.097699</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>jg8csbf</td>
+      <td>jg5xi70</td>
+      <td>&gt; why can’t the bus stop at the front door\n\nThis isn't a bus.</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 10:20:02</td>
+      <td>3</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.2960</td>
+      <td>0.001986</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>jg68f01</td>
+      <td>jg5y3ha</td>
+      <td>Businesses face the beltline. It genuinely seems like you’ve spent no time on this streetcar route or you would know that. \n\nBusses are not more environmentally friendly than electric streetcars.</td>
+      <td>rco8786</td>
+      <td>2023-04-13 21:23:16</td>
+      <td>17</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.3682</td>
+      <td>0.008564</td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td>jg8chaw</td>
+      <td>jg8b4i8</td>
+      <td>&gt; Sending future dollars on maintenance is no way to grow a functional system.\n\nDo you feel the same way about spending money to maintain our road infrastructure, especially in light of GDOT planning to spend tens of billions of dollars on massive express lanes, interchange rebuilds, and commercial truck lanes through MMIP?</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 10:17:56</td>
+      <td>6</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.2960</td>
+      <td>0.000930</td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td>jg644k8</td>
+      <td>jg5rp43</td>
+      <td>&gt; I live near I-75 and that’s actually annoying to hear all of the time.\n\nSeriously. I live pretty close to the current streetcar and... I hear loud, annoying cars way more than I do the rail line.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 20:50:29</td>
+      <td>13</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.4404</td>
+      <td>0.003862</td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td>jg5thd0</td>
+      <td>jg5rp43</td>
+      <td>That's really unfortunate. Living that close to a freeway has shown measurable impacts on health risks.\n\nI've lived that close to both a freeway and to light rail, and the latter is a very different type of noise though!</td>
+      <td>NaN</td>
+      <td>2023-04-13 19:30:06</td>
+      <td>-10</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.6468</td>
+      <td>0.007061</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>jg876z3</td>
+      <td>jg6k9u5</td>
+      <td>Are you seriously trying this? Some of, if not the, most valuable real estate in the metro area is anchored my MARTA rail lines. MARTA's property is valuable enough that they've been turning parking lots into housing and commercial developments while many others grow around their stations.\n\nLike... how do you even look at the system and say 'nah that shit is bad for property values' without your pants spontaneously combusting?</td>
+      <td>killroy200</td>
+      <td>2023-04-14 09:40:52</td>
+      <td>8</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.9082</td>
+      <td>0.819330</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>jg8slmy</td>
+      <td>jg6k9u5</td>
+      <td>&gt; Given what I see of property values near MARTA lines\n\nCare to cite any examples of depressed land values *due to* MARTA?</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 12:03:03</td>
+      <td>3</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.6486</td>
+      <td>0.000582</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>jg5vgen</td>
+      <td>jg5t8q1</td>
+      <td>So we can't have light rail, and if we do have it people will hate it, because we're not the same caliber city as Chicago or NYC? Walk me through that.\n\nThe density around the east side trail is no different than the density in the residential neighborhoods of Chi or outer neighborhoods in Queens/Bk....where they still have trains.</td>
+      <td>rco8786</td>
+      <td>2023-04-13 19:44:37</td>
+      <td>15</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.7096</td>
+      <td>0.005921</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>jg64swj</td>
+      <td>jg5zbqw</td>
+      <td>because ridership will be low by any standard. and extending the streetcar isn't a good use of one-time funds, because we know there is zero other dollars for transit expansion till 2040. zero.  Will the Atlanta Streetcar generate at least 10,000 riders per day once it is extended to PCM?  If not, it really isn't worth sinking money into rail here. Atlanta needs proof, any proof, that transit expansion can work here.  The only way we can drum up more money after 2040 is to show that whatever we build from now till 2040 will generate 10s of thousands of riders per day to justify renewing the tax or seeking even more money.</td>
+      <td>joe2468conrad</td>
+      <td>2023-04-13 20:55:41</td>
+      <td>-40</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.6652</td>
+      <td>0.000452</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>jg63w91</td>
+      <td>jg5xnl4</td>
+      <td>right but how many of them would actually use the Streetcar? Especially considering how slow it runs on the existing section and just as slow on the future section.  Downtown Atlanta isn't drawing much office workers nowadays and few companies move there. GA state students are unlikely to live in Va-Hi/IP/O4W.\n\nAnd the whole "gotta start somewhere" doesn't hold water in Atlanta because this rail project is pretty much it for rail expansion in Atlanta.  There's literally no more money for anything else.  The sales tax is maxed out till 2040 and there is no other source of funds for expansion within the City. Hence the BRT treatment for every other corridor and those projects aren't totally assured.  That's why I'm skeptical of extending the streetcar, not because of NIMBY reasons but because it is literally has some of the worst ridership potentials in the region. 300 people rode the streetcar each day before it shut down for repairs.  Even if ridership optimistically triples despite barely doubling in length, we will have a transit line that attracts less than 1,000 riders a day.  I think this one-time shot we have with transit funds needs to go to a project that can generate at least 15,000 new transit riders every single day.</td>
+      <td>joe2468conrad</td>
+      <td>2023-04-13 20:48:41</td>
+      <td>-12</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.3588</td>
+      <td>0.000406</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>jgbsdr8</td>
+      <td>jg9fy8j</td>
+      <td>[removed]</td>
+      <td>NaN</td>
+      <td>2023-04-15 01:51:42</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.006519</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>jg6c7pc</td>
+      <td>jg6bm50</td>
+      <td>Yeup! Built before we had nearly as restrictive zoning, too, so you get much more density and mix of uses than is allowed by default today. Loooots of quaint, lovely parts of the city that are technically out of code and illegal today, including many of our streetcar suburbs.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 21:52:14</td>
+      <td>11</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.1260</td>
+      <td>0.996479</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>jg6isp8</td>
+      <td>jg65tb1</td>
+      <td>Which is why MARTA abandoning rail for the Purple Line is disgraceful. I’d argue rail on that route was every bit as important and needed as rail on the Beltline.</td>
+      <td>mellophonius</td>
+      <td>2023-04-13 22:44:47</td>
+      <td>11</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.4939</td>
+      <td>0.000536</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>jg7bxqo</td>
+      <td>jg65tb1</td>
+      <td>Agreed and this is how Marta got a tax increase about 5 years ago by saying the increase would be used for the Emory line..  What a money grab.</td>
+      <td>Zgdaf</td>
+      <td>2023-04-14 04:06:41</td>
+      <td>4</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.6908</td>
+      <td>0.003834</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>jg6iatp</td>
+      <td>jg65tb1</td>
+      <td>You can walk from the cdc to Emory.</td>
+      <td>91210toATL</td>
+      <td>2023-04-13 22:40:41</td>
+      <td>-4</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.731811</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>jg84blz</td>
+      <td>jg65tb1</td>
+      <td>&gt; GA Tech not having a direct train stop is disgraceful.\n\nThere are two MARTA HRT stations at the edge of campus.</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 09:19:27</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.2960</td>
+      <td>0.001989</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>jgaz5e8</td>
+      <td>jg8wd0y</td>
+      <td>Yeah, or didn’t do their due diligence.  Reminds me of the outer perimeter (hwy 20) planned since the 70s that builders built houses in the 90s in the previously planned highway widening.  \nSo when the highway plans came out all these home owners freaked out realizing they were going to lose their houses.   Granted who would think a builder would be this evil, but the plans were published.</td>
+      <td>Zgdaf</td>
+      <td>2023-04-14 21:08:42</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.5385</td>
+      <td>0.004350</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>jg639ih</td>
+      <td>jg5zpi8</td>
+      <td>I mean, it *is*, but the right of way is big enough to contain both transit and the trail without really hurting either. This is because the BeltLine was *literally designed from the start* to be a transit corridor.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 20:43:51</td>
+      <td>15</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4960</td>
+      <td>0.996108</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>jg638xf</td>
+      <td>jg5zpi8</td>
+      <td>You know that land to the other side of the beltline? What do you think that’s for? They didn’t just make a mistake and not make the beltline wide enough. The ORIGINAL plan, you know the plan that got HUNDREDS of MILLIONS to build the beltline, was for parallel transit in that “backyard.”\nA bike on the beltline is a fucking nightmare anyways, unless it’s 5 am or after midnight, which is fine let the pedestrians have their fun.</td>
+      <td>Scamperbot2000</td>
+      <td>2023-04-13 20:43:43</td>
+      <td>12</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7264</td>
+      <td>0.002116</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>jg63d5r</td>
+      <td>jg5yfep</td>
+      <td>Yeah... it was an industrial freight rail line serving active heavy industry. How fast people seem to forget.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 20:44:38</td>
+      <td>16</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.2023</td>
+      <td>0.038431</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>jg67247</td>
+      <td>jg5xw18</td>
+      <td>I would disagree if the nimbys apposed such bus.\n\nI just like that the belt line is reserved for pedestrians and think Atlanta is unique in its trials and shouldn’t muddy them with transit opportunities.</td>
+      <td>BIGJake111</td>
+      <td>2023-04-13 21:12:55</td>
+      <td>-9</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.3612</td>
+      <td>0.996261</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>jg67r00</td>
+      <td>jg63wgv</td>
+      <td>All those homes and jobs shouldn’t deal with a bus dividing their back yard. The beltline should be reserved for those walking or biking along it and maintain a pedestrian friendly space. Transit should stay on the busy streets and large parking lots opposite of the “backyard” not backdoor of the businesses and homes.</td>
+      <td>BIGJake111</td>
+      <td>2023-04-13 21:18:15</td>
+      <td>-4</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4939</td>
+      <td>0.012074</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>jg8luf0</td>
+      <td>jg8csbf</td>
+      <td>A bus could serve the same function stopping at the other entry to the business along the belt line.</td>
+      <td>BIGJake111</td>
+      <td>2023-04-14 11:20:02</td>
+      <td>0</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.1531</td>
+      <td>0.003002</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>jg6gkz9</td>
+      <td>jg68f01</td>
+      <td>Pedestrians are more environmentally freidntly than streetcars or buses. Who is supposed to ride the street car? Someone OTP that parks in a parking lot? You’d walk the belt line if you lived along it.</td>
+      <td>BIGJake111</td>
+      <td>2023-04-13 22:26:52</td>
+      <td>-1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.007255</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>jhvlh1b</td>
+      <td>jg8chaw</td>
+      <td>No.</td>
+      <td>HeydaydayHey</td>
+      <td>2023-04-26 23:45:29</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.2960</td>
+      <td>0.002711</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>jg5u3ps</td>
+      <td>jg5thd0</td>
+      <td>Yeah. Fortunately I have a lot of trees in my neighborhood so it’s not as bad 8 months a year. \n\nWhen the tree leaves are gone both the air and the sound isn’t as good, but I get skyline views.</td>
+      <td>420everytime</td>
+      <td>2023-04-13 19:34:39</td>
+      <td>6</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.5385</td>
+      <td>0.997713</td>
+    </tr>
+    <tr>
+      <th>132</th>
+      <td>jg8zt2w</td>
+      <td>jg876z3</td>
+      <td>I'm basing this on my search for housing last year, in which the only affordable places near MARTA were right next to it.</td>
+      <td>NaN</td>
+      <td>2023-04-14 12:49:40</td>
+      <td>0</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.003369</td>
+    </tr>
+    <tr>
+      <th>133</th>
+      <td>jg8zou1</td>
+      <td>jg8slmy</td>
+      <td>Just open up Zillow and look for apartment values near MARTA lines. Price per sqft plummets.</td>
+      <td>NaN</td>
+      <td>2023-04-14 12:48:55</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4019</td>
+      <td>0.000649</td>
+    </tr>
+    <tr>
+      <th>134</th>
+      <td>jg6k59u</td>
+      <td>jg5vgen</td>
+      <td>The difference here is that the number of spots to live in Atlanta to simulate that NYC feel is really tiny, and most of us don't make as much money as you do to afford to live there. These plans just create a Brooklyn Disneyworld for the wealthy to take advantage of some of the overall lower costs of living here, while enjoying some simulacral city benefits not available to the vast majority who live here and suffer from the city's poor infrastructure.\n\nI don't really want to hear about Beltline rail line moonshot projects until the city and state start taking mass transit seriously in general, in a way that benefits the people who need it most.</td>
+      <td>NaN</td>
+      <td>2023-04-13 22:55:59</td>
+      <td>-4</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.5516</td>
+      <td>0.989071</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>jg65qi0</td>
+      <td>jg5vgen</td>
+      <td>Makes me wonder why they don’t just build an elevated light rail like “the loop” in Chicago. No need to take away more roads/land to accommodate it.</td>
+      <td>BedrockFarmer</td>
+      <td>2023-04-13 21:02:55</td>
+      <td>-5</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0772</td>
+      <td>0.965262</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>jg68gu6</td>
+      <td>jg64swj</td>
+      <td>I live on the existing streetcar line, I can say with certainty that many, many GSU students will use the streetcar to get to PCM and the beltline in general.</td>
+      <td>NotoriousN1ck</td>
+      <td>2023-04-13 21:23:39</td>
+      <td>27</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.2500</td>
+      <td>0.991880</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>jg67h03</td>
+      <td>jg64swj</td>
+      <td>Just because you won’t ride it doesn’t mean other people won’t. There is a market for this transit.</td>
+      <td>alpacasarebadsingers</td>
+      <td>2023-04-13 21:16:09</td>
+      <td>36</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.104445</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>jg6684d</td>
+      <td>jg64swj</td>
+      <td>I don't really agree with this.  Also on the funding side I'll bet the strategy will be to extend the TAD and use that money to fund portions of transit on the beltline.  The beltline actually sent out a survey a few days ago hinting at that.  Also the current Marta tax runs until \~2056, they will have more money to complete future phases before needing to hold another vote (also holding public meetings next week to talk through this).</td>
+      <td>NaN</td>
+      <td>2023-04-13 21:06:38</td>
+      <td>0</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.1598</td>
+      <td>0.003055</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>jg67qa2</td>
+      <td>jg63w91</td>
+      <td>The existing streetcar puts you in traffic, so is as slow as a car at rush house and it doesn't connect downtown to anything. \n\nIf it got to the beltline, it would have served a bit of purpose</td>
+      <td>righthandofdog</td>
+      <td>2023-04-13 21:18:05</td>
+      <td>18</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.000504</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>jg67dbn</td>
+      <td>jg63w91</td>
+      <td>If 1% of beltline traffic takes the trolley it will far more than 1000 people a day.</td>
+      <td>alpacasarebadsingers</td>
+      <td>2023-04-13 21:15:21</td>
+      <td>15</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.686759</td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td>jg6e4hx</td>
+      <td>jg6c7pc</td>
+      <td>Exactly, my old house in Candler Park had a 2000 SF lot, we were less than 10 feet from the next house and our front yard was maybe 15 feet deep. The minimum new lot size today is 9000 SF with 15 side set backs and even worse front set backs.</td>
+      <td>Pete_Bell</td>
+      <td>2023-04-13 22:07:12</td>
+      <td>9</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.5423</td>
+      <td>0.003039</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>jg8rrqi</td>
+      <td>jg6isp8</td>
+      <td>&gt;  Purple Line \n\nWhat's the Purple Line? Clifton?</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 11:57:41</td>
+      <td>2</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.005739</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>jg843v9</td>
+      <td>jg6iatp</td>
+      <td>1. Depending on what part of each campus you're going to that can be a fairly long walk.\n\n2. Rail extensions aren't about the distances between individual stops. It's about connecting those stops to the greater rail network. CDC to Emory might not be 100% necessary, but airport to CDC or Emory to Georgia State would see plenty of use.</td>
+      <td>MadManMax55</td>
+      <td>2023-04-14 09:17:46</td>
+      <td>2</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0387</td>
+      <td>0.262322</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>jgb76wm</td>
+      <td>jgaz5e8</td>
+      <td>&gt;builders built houses in the 90s in the previously planned highway widening.\n\nGDOT didn't own the land where the neighborhoods were built.</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 22:14:38</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.001491</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>jg67hjl</td>
+      <td>jg639ih</td>
+      <td>Why can’t the bus drive on roads? Or do nimbys have biased opinions of buses compared to trolley. There are spaces suitable for bus stops all along the road frontages to belt line properties that could preserve the belt line as a pedestrian, cycling carbon neutral corridor.</td>
+      <td>BIGJake111</td>
+      <td>2023-04-13 21:16:15</td>
+      <td>-12</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.4019</td>
+      <td>0.017602</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>jg678t8</td>
+      <td>jg63d5r</td>
+      <td>But now it is one of the only pedestrian grassed escapes from transit. Why would you ever introduce transit to it at this point when there are several roads in atl to put another bus on. If you don’t like the bus then that’s your own nimbyism and bias against gentrified transportation like a trolly compared to a bus.</td>
+      <td>BIGJake111</td>
+      <td>2023-04-13 21:14:23</td>
+      <td>-1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7684</td>
+      <td>0.006712</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>jg6u3nl</td>
+      <td>jg67247</td>
+      <td>Have you ever even BEEN to Atlanta? Your comments on this post are getting more and more surreal and detached from reality...</td>
+      <td>Mmngmf_almost_therrr</td>
+      <td>2023-04-14 00:26:44</td>
+      <td>8</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.1935</td>
+      <td>0.000720</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>jg7oxpq</td>
+      <td>jg67r00</td>
+      <td>But the reason the beltline was built was for this transit. So if you bought it thinking it was going to be your personal “backyard”oasis and now are concerned for transit in your area, the problem isn’t transit. It is that you were misinformed at the beginning. \n\nIts like buying a house across from a lot with a big “condos coming soon” sign because you like all the shops and restaurants built up to support the eventual condos, but being surprised when they build the condos.</td>
+      <td>alpacasarebadsingers</td>
+      <td>2023-04-14 07:01:50</td>
+      <td>10</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.6652</td>
+      <td>0.811556</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>jg69mtq</td>
+      <td>jg67r00</td>
+      <td>The BeltLine was literally designed and built for transit to operate separated from traffic. It's not 'dealing with', it's 'having access to', as has literally always been the plan. As I keep saying, I've *seen* the plans for trying to force a loop route to work using roads, and it just doesn't. The surface streets can not effectively replicate the path of the BeltLine, and even attempting to destroys the utility of the grade-separation that makes the BeltLine useful for transportation in the first place.\n\nIf you want green space without light rail, go to a park. The BeltLine is, and has always been, a transportation corridor first and foremost. Your desire to treat it as anything else does not change that reality.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 21:32:34</td>
+      <td>21</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.3806</td>
+      <td>0.001525</td>
+    </tr>
+    <tr>
+      <th>150</th>
+      <td>jg8mqno</td>
+      <td>jg8luf0</td>
+      <td>Minus the dedicated right-of-way and intermixing in traffic.</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 11:25:42</td>
+      <td>5</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4588</td>
+      <td>0.000979</td>
+    </tr>
+    <tr>
+      <th>151</th>
+      <td>jg6hop8</td>
+      <td>jg6gkz9</td>
+      <td>I do live along it. And I do walk it. And I am looking forward to having the streetcar to get around even easier and have a much further range.</td>
+      <td>rco8786</td>
+      <td>2023-04-13 22:35:44</td>
+      <td>16</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4215</td>
+      <td>0.999669</td>
+    </tr>
+    <tr>
+      <th>152</th>
+      <td>jg88uz7</td>
+      <td>jg6gkz9</td>
+      <td>&gt; Pedestrians are more environmentally freidntly than streetcars or buses.\n\nOnly if they aren't also driving a bunch. You need the *full* suite of mobility options to replace driving.</td>
+      <td>killroy200</td>
+      <td>2023-04-14 09:52:52</td>
+      <td>5</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.022966</td>
+    </tr>
+    <tr>
+      <th>153</th>
+      <td>jgi226q</td>
+      <td>jg8zt2w</td>
+      <td>Do you have access to Zillow from an alternate dimension?\n\nWhere can I get me some of this affordable real estate near MARTA?</td>
+      <td>-metal-555</td>
+      <td>2023-04-16 12:55:44</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.005206</td>
+    </tr>
+    <tr>
+      <th>154</th>
+      <td>jg96vlm</td>
+      <td>jg8zou1</td>
+      <td>Nonwithstanding that apartment rates on Zillow are a lousy way to determine land values and whether they negatively correlate to proximity to MARTA, I'll play along:\n\n[3/2 SFH in Inman Park (short walk from Inman Park-Reynoldstown station): $3,900/mo](https://www.zillow.com/homedetails/193-Battery-Pl-NE-Atlanta-GA-30307/35843294_zpid/)\n\n[1/1 high-rise condo in Midtown (short walk from Midtown station): $2,295/mo](https://www.zillow.com/homedetails/943-Peachtree-St-NE-UNIT-1018-Atlanta-GA-30309/2072128035_zpid/)\n\n[3/2 SFH in Buckhead (short walk from Lindbergh station): $4,500/mo](https://www.zillow.com/homedetails/2575-Sharondale-Dr-NE-Atlanta-GA-30305/35932528_zpid/)\n\n[3/3 townhouse in Buckhead (short walk from Lenox station): $6,750/mo](https://www.zillow.com/homedetails/4-Pritchard-Way-NE-Atlanta-GA-30326/65466502_zpid/)\n\n[4/2 SFH in Washington Park (short walk from Ashby station): $3,000/mo](https://www.zillow.com/homedetails/31-Ollie-St-NW-Atlanta-GA-30314/35834477_zpid/)\n\n[3/2 duplex in Oakland City (next to Oakland City station): $1,900/mo](https://www.zillow.com/homedetails/1218-Campbellton-Rd-SW-A-Atlanta-GA-30310/2095648773_zpid/)\n\nNot seeing how these rents are plummeting/lower because they're near MARTA stations.</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 13:35:02</td>
+      <td>5</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.1531</td>
+      <td>0.000808</td>
+    </tr>
+    <tr>
+      <th>155</th>
+      <td>jg7qkbq</td>
+      <td>jg6k59u</td>
+      <td>You can cry those tears all you want. Marta has tried to expand over and over and over out into other counties and those people just don’t want it. Now they find a project in town that serves a dense urban cluster and you’re pissed about it because it doesn’t serve you. Sorry man, it’s not like they haven’t tried. And LOL at one singular stretch of streetcar through one of the actually dense areas of the city being a “moonshot”</td>
+      <td>rco8786</td>
+      <td>2023-04-14 07:19:21</td>
+      <td>9</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.6342</td>
+      <td>0.003648</td>
+    </tr>
+    <tr>
+      <th>156</th>
+      <td>jg67ey5</td>
+      <td>jg65qi0</td>
+      <td>Because it's more expensive than just putting it in the existing, already-prepared right of way along the BeltLine. Not to mention that you *do* need land to put down the support pillars.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 21:15:42</td>
+      <td>14</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4019</td>
+      <td>0.011222</td>
+    </tr>
+    <tr>
+      <th>157</th>
+      <td>jg97ypd</td>
+      <td>jg65qi0</td>
+      <td>You think the NIMBYs are pissed now, imagine them reacting to a 30-foot high elevated rail structure *over* the Beltline.</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 13:42:03</td>
+      <td>3</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.6369</td>
+      <td>0.002670</td>
+    </tr>
+    <tr>
+      <th>158</th>
+      <td>jg69ti9</td>
+      <td>jg68gu6</td>
+      <td>I am not a GSU student, but also live on the existing streetcar line. I am one of the people who would use it MUCH more once it connects to the BeltLine.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 21:33:57</td>
+      <td>26</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.974478</td>
+    </tr>
+    <tr>
+      <th>159</th>
+      <td>jg6ch4u</td>
+      <td>jg67h03</td>
+      <td>Not only is there a market for this transit, but there's a market for many more places like the Eastside BeltLine in general. If we just wallow in cynicism and gloom all the time, though, we'll never be able to address the clear, and obvious demand for walkable, bikeable, and soon to be transit-served areas.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 21:54:16</td>
+      <td>27</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.4823</td>
+      <td>0.002409</td>
+    </tr>
+    <tr>
+      <th>160</th>
+      <td>jg74ewk</td>
+      <td>jg67h03</td>
+      <td>Okay so is the 3,000 riders per day MARTA projection post-extension justifiable? That’s a MARTA number we know is likely a bit too optimistic, and pre pandemic. That’s abysmal ridership for rail investment. We need a fuck ton more “other people” to create a transit market. Bus routes post-pandemic get more riders than this.</td>
+      <td>joe2468conrad</td>
+      <td>2023-04-14 02:24:30</td>
+      <td>-9</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.2732</td>
+      <td>0.000851</td>
+    </tr>
+    <tr>
+      <th>161</th>
+      <td>jg6q5rz</td>
+      <td>jg67qa2</td>
+      <td>Yep. And I’d say twenty people ride it, that’s twenty less cars on that stretch of road. From a density standpoint every bit helps.</td>
+      <td>davidw223</td>
+      <td>2023-04-13 23:48:53</td>
+      <td>3</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.5859</td>
+      <td>0.996315</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>jg74gdj</td>
+      <td>jg67dbn</td>
+      <td>But MARTA predicts 3,000 riders per day…and that’s pre-pandemic.</td>
+      <td>joe2468conrad</td>
+      <td>2023-04-14 02:25:02</td>
+      <td>2</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.019159</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>jg869iy</td>
+      <td>jg843v9</td>
+      <td>In the greater scheme of things sure but, how would they recoup the cost with a rail from Emory to CDC or Gastate? There honestly isn't enough traffic there. Only a few hundred students on the weekends.</td>
+      <td>91210toATL</td>
+      <td>2023-04-14 09:34:05</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7506</td>
+      <td>0.001097</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>jg693tj</td>
+      <td>jg67hjl</td>
+      <td>&gt; Why can’t the bus drive on roads?\n\nDo me a favor. Go spend some time in Google Maps, and try to draw me a route that covers the same path as the BeltLine. Let me know what it ends up looking like, and how many of the BeltLine-centered developments are actually served by it.\n\nI've seen such proposals already, and they're garbage. The entire point of transit on the BeltLine is that it's mostly all separated from cars on the street, and in a route that's not replicable by those same streets. It's a unique place that doesn't work for cars, but does work for transit, walking, and biking.\n\n&gt; carbon neutral corridor.\n\nLight rail is electric powered, and expands the way people can travel to &amp; from at the BeltLine in ways other than driving. It is good for reducing carbon intensity. It's weird that you even try to suggest otherwise.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 21:28:36</td>
+      <td>17</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7184</td>
+      <td>0.017165</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>jg68hja</td>
+      <td>jg678t8</td>
+      <td>1) It's not a bus. It's light rail. There are operational and physical reasons why it will be rail and not a bus.\n\n2) The BeltLine was literally built for transit, and transit will complete the non-car mobility options. This is important for all the housing and jobs that are centered on the BeltLine itself.\n\n3) The current trail really, *really* is not that serene, and transit will not change that.\n\n4) We should be building more greenways and corridors like the BeltLine (including completing the BeltLine itself), rather than treating the BeltLine as some sacred place that should never be anything other than what it is right this second.\n\n5) I've seen the attempts to route transit on the street grid as an alternative to the BeltLine, and it's absolutely horrendous. Total non-starter for transit utility.\n\n6) We should have better transit on the roads. That has nothing to do with the BeltLine, though. They're different use cases for different purposes.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 21:23:48</td>
+      <td>18</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.0959</td>
+      <td>0.001806</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>jg7fkvv</td>
+      <td>jg6hop8</td>
+      <td>That’s valid but would you rather the trolly not be at your apartments front door?</td>
+      <td>BIGJake111</td>
+      <td>2023-04-14 04:59:25</td>
+      <td>-1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.010322</td>
+    </tr>
+    <tr>
+      <th>167</th>
+      <td>jg90l0g</td>
+      <td>jg7qkbq</td>
+      <td>&gt;Now they find a project in town that serves a dense urban cluster and you’re pissed about it because it doesn’t serve you. Sorry man, it’s not like they haven’t tried.\n\nI'm not pissed about it, it doesn't really impact me. The Beltline boom already displaced me without the streetcar, so now it doesn't impact me one way or another. I just think it's a waste of time to try this, and, per my original comment, I'm waiting with popcorn to watch some of the wealthy urbanists along the beltline become nimbyified.\n\n&gt; And LOL at one singular stretch of streetcar through one of the actually dense areas of the city being a “moonshot”\n\nWelcome to the reality of Georgia mass transit. This isn't China, we don't build things here haha. It is funny that the highest aspirations we have right now is a glorified bar shuttle for the top 5% or so of Atlanta's population. It's very very on brand for this city lol</td>
+      <td>NaN</td>
+      <td>2023-04-14 12:54:34</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.8599</td>
+      <td>0.005241</td>
+    </tr>
+    <tr>
+      <th>168</th>
+      <td>jg6cle5</td>
+      <td>jg69ti9</td>
+      <td>I was a GSU student and some of my friends and sister are current students. \n\nWe spent time on the PCM and Inman Park side of the Beltline multiple times a week. It would’ve been great being able to leave our cars on campus and take the streetcar to the beltline. Much less of a hassle. \n\nThere’s absolute a market for this and I just don’t why someone would say otherwise</td>
+      <td>stilldreamingat2am</td>
+      <td>2023-04-13 21:55:11</td>
+      <td>17</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7906</td>
+      <td>0.019010</td>
+    </tr>
+    <tr>
+      <th>169</th>
+      <td>jg83td5</td>
+      <td>jg74ewk</td>
+      <td>3000 projected riders per day is roughly 10x the current ridership numbers. There is likely a lot of optimism cooked into that number. No doubt the construction cost estimates also have a fair amount of optimism baked in as well. The sad part is that the streetcar expansion(s) will soak up a lot of transit funds that could be better allocated elsewhere.</td>
+      <td>Jacobmc1</td>
+      <td>2023-04-14 09:15:31</td>
+      <td>5</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7783</td>
+      <td>0.039472</td>
+    </tr>
+    <tr>
+      <th>170</th>
+      <td>jg7t3gy</td>
+      <td>jg6q5rz</td>
+      <td>It should have gone to the beltline initially, but that is water under the bridge. \n\nIt's actually very useful if you live in town for football or soccer games.  Uber is fine to get TO games, but wait times and prices are ridiculous when 50-70k people are leaving at once.\n\nWalk to the streetcar, which gets past all the getting into the interstate traffic, then take the streetcar to Edgewood and get an Uber where it's not crowded and has no surge prices.</td>
+      <td>righthandofdog</td>
+      <td>2023-04-14 07:44:23</td>
+      <td>3</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.2161</td>
+      <td>0.012531</td>
+    </tr>
+    <tr>
+      <th>171</th>
+      <td>jg6tmue</td>
+      <td>jg693tj</td>
+      <td>I don't think that person actually understands *any* of the terms he's tossing out. Pure word salad.</td>
+      <td>Mmngmf_almost_therrr</td>
+      <td>2023-04-14 00:22:06</td>
+      <td>9</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.000347</td>
+    </tr>
+    <tr>
+      <th>172</th>
+      <td>jg6h3pt</td>
+      <td>jg68hja</td>
+      <td>As for point 2. Who do you think will actually go to work on a trolly? It’s a tourist destination and one of very few in atl and we should keep it as a pedestrian friendly trail. Imagine if they put a rail line along your favorite state park nature trail, I know it’s not the same but in an urban setting the belt line is as close as it gets to a park.\n\nI agree with point 4 but the unique right of way situation with the beltline is hard to come by, specifically in a large metro area and we should protect it as the pedestrian friendly realm it is. \n\nAs for point 6 I really am not convinced that anyone able bodied cannot walk or bike, if you are not able bodied we should accommodate but a street car is not the most efficient.</td>
+      <td>BIGJake111</td>
+      <td>2023-04-13 22:31:05</td>
+      <td>-2</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7811</td>
+      <td>0.007288</td>
+    </tr>
+    <tr>
+      <th>173</th>
+      <td>jg7ovog</td>
+      <td>jg7fkvv</td>
+      <td>I mean sure. I’d also rather not hear all the cars that drive by my front door. I’d rather my next door neighbor replace the muffler on his Toyota with the stock one so I didn’t have to hear his loud-ass fart can car every single time he gets in it.  I’d rather not have street parking directly outside my front door. I’d rather people not leave scooters laying in the sidewalk outside my front door. I’d rather people walking by my front door not talk so loudly.  But I live in a city, and hearing things is part of that life.\n\nIt sure seems like some people are making this out to be like their quaint, quiet country road is about to be bombarded by a coal fired steam locomotive, blowing its horn each time it passes a residence.\n\nHave you actually seen or heard our streetcar? It’s very modern and very quiet.</td>
+      <td>rco8786</td>
+      <td>2023-04-14 07:01:12</td>
+      <td>13</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.6456</td>
+      <td>0.578119</td>
+    </tr>
+    <tr>
+      <th>174</th>
+      <td>jg979qe</td>
+      <td>jg90l0g</td>
+      <td>You're being unreasonably cynical. This is one of numerous projects that Marta has either underway or has tried with incredible might to get approved and built only to be stopped by the very people you claim you wish they would serve. (Not totally excusing Marta, they've had plenty of own goals also).\n\nI can't, though, figure out why you're on here so up in arms about a streetcar that might go near a few houses and then also say that you're not in the area and it doesn't affect you at all.\n\nAnyway, enjoy your popcorn and side of sour grapes.</td>
+      <td>rco8786</td>
+      <td>2023-04-14 13:37:34</td>
+      <td>4</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.6369</td>
+      <td>0.012076</td>
+    </tr>
+    <tr>
+      <th>175</th>
+      <td>jg745fa</td>
+      <td>jg6cle5</td>
+      <td>But would it actually generate thousands of new riders each day? Considering the current ridership is 300 per day?\n\nMARTA’s own ridership estimates, which we know are inflated, are pre-pandemic based and slated to be 3,000 per day. A 10x increase from today. Even if that were to somehow come to fruition, is a net growth of 3,000 riders really the best use of our only shot at a rail project? Many conventional city bus routes around the country clear 3,000 riders per day post-pandemic easily with zero hard infrastructure.</td>
+      <td>joe2468conrad</td>
+      <td>2023-04-14 02:21:14</td>
+      <td>5</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.9638</td>
+      <td>0.088003</td>
+    </tr>
+    <tr>
+      <th>176</th>
+      <td>jg6d38k</td>
+      <td>jg6cle5</td>
+      <td>&gt; There’s absolute a market for this and I just don’t why someone would say otherwise\n\nSome people just don't want to accept that things can change. They're so attached to their established view of what Atlanta is, or isn't, that they feel they must lash out at any outcome different than that perception. Some wrap it up in cynical 'skepticism', while others are just more blatant about fighting against changes. Nothing unique to Atlanta.</td>
+      <td>killroy200</td>
+      <td>2023-04-13 21:59:03</td>
+      <td>18</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.7763</td>
+      <td>0.003809</td>
+    </tr>
+    <tr>
+      <th>177</th>
+      <td>jg8aebx</td>
+      <td>jg83td5</td>
+      <td>&gt; 3000 projected riders per day is roughly 10x the current ridership numbers.\n\nOh, I JUST got a copy of *Headlights* from 1982 that has an article about the opening of MARTA's first sections. Let's see, the 1.9-mile initial subway line from Garnett to North Avenue (excluding the still-under-construction Peachtree Center) operated with 12-minute frequencies annnndddd...\n\nHad an average daily ridership of 5,000 people.\n\nThat's right, the *heavy metro subway* through the densest part of the city, at a time when transit modal share was much higher than today... still only averaged 5,000 people per day.\n\nWhy? Because the system was incomplete.\n\nThe current streetcar is no different. It was literally meant to be the launch point for a larger system that got stalled out until now. A system that included the full BeltLine loop, as well as many crosstown streetcar routes.\n\nJust as it would have been a travesty to not build out the full heavy rail system based on the first segment's ridership, so too would it be a travesty to kill off the larger future light rail network based on these first few segments. Especially given how much the Eastside Trail has grown.</td>
+      <td>killroy200</td>
+      <td>2023-04-14 10:03:43</td>
+      <td>10</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.9153</td>
+      <td>0.001042</td>
+    </tr>
+    <tr>
+      <th>178</th>
+      <td>jg89znw</td>
+      <td>jg7t3gy</td>
+      <td>Basing a transit investment on ease of attending sporting events is a losing proposition. Atlanta United has 17 home games on the 2023 schedule. The Falcons have 9 home games in 2023. Even if both teams add 4 games each for playoffs, exhibitions, etc, you’re talking about a massive transit investment to service 34 days a year. You can even double the number of crowd drawing events to account for concerts and such, but that still leaves almost 300 days a year where the ridership market you’re describing doesn’t really exist.</td>
+      <td>Jacobmc1</td>
+      <td>2023-04-14 10:00:49</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.2500</td>
+      <td>0.002561</td>
+    </tr>
+    <tr>
+      <th>179</th>
+      <td>jg78hgl</td>
+      <td>jg6h3pt</td>
+      <td>I would take this route to work downtown. It is part of the reason I bought a house where I did in VaHi.</td>
+      <td>linzb324</td>
+      <td>2023-04-14 03:18:19</td>
+      <td>16</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.975313</td>
+    </tr>
+    <tr>
+      <th>180</th>
+      <td>jg6vze4</td>
+      <td>jg6h3pt</td>
+      <td>&gt;Imagine if they put a rail line along your favorite state park nature trail,\n\nI'd love that! I could get there to be in nature without having to drive my polluting vehicle.</td>
+      <td>MattCW1701</td>
+      <td>2023-04-14 00:46:19</td>
+      <td>10</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.8172</td>
+      <td>0.999522</td>
+    </tr>
+    <tr>
+      <th>181</th>
+      <td>jg7fzbm</td>
+      <td>jg6h3pt</td>
+      <td>I live downtown and work at PCM, so this is perfect for my commute and to take my car trips off the road. Better for other drivers &amp; better for the environment</td>
+      <td>ATLtinyrick</td>
+      <td>2023-04-14 05:05:13</td>
+      <td>12</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.8678</td>
+      <td>0.993134</td>
+    </tr>
+    <tr>
+      <th>182</th>
+      <td>jg88ehd</td>
+      <td>jg6h3pt</td>
+      <td>The BeltLine has too many towers, homes, and staple amenities along it to be just 'a tourist destination'. Why? Because it was *literally built as a transportation corridor*, and adjacent development along it matches that. Seriously. People already live, work, commute, shop, and eat all along the BeltLine. I use it as part of my bike trip to see family on the eastside. It's not just a tourist destination.\n\nI have friends / aquantainces with kids who can't cycle with them because they're too young. I don't want to always haul my bike down to the BeltLine and deal with weaving through crowds. The weather doesn't always allow you to comfortably walk or bike. Some people need to move faster than walking or biking allows. Some people are traveling with people who are mobility impaired even if they aren't.\n\nAnd some people just don't want to walk or bike all that far.\n\nSo what? Life's diverse like that. Years ago people would say that we shouldn't spend the money on the BeltLine because no one would want to walk or bike it. Now people are saying we shouldn't build transit because no one will ride it. Yeah, nah, it's not a good argument.</td>
+      <td>killroy200</td>
+      <td>2023-04-14 09:49:36</td>
+      <td>10</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4276</td>
+      <td>0.001224</td>
+    </tr>
+    <tr>
+      <th>183</th>
+      <td>jg8za6i</td>
+      <td>jg6h3pt</td>
+      <td>Just to add to the tally- I regularly take the Beltline for my commute to work. Many people who live in town, walking or biking distance to the Beltline, also work (or enjoy going places that are) walking or biking distance to it. It seems like a weird take to say, "I don't commute this way, so no one would!" \n\nIs the Beltline, to you, a "serene" "nature trail," or is it "a tourist destination"? It seems to me that the more authentic argument that you're trying to make is, "I really like the Beltline, and I like the way it is now. I don't want it to change." That's a valid opinion, but it's not fair to project the way that you use and enjoy it is the only way it could be used and enjoyed.</td>
+      <td>derina585</td>
+      <td>2023-04-14 12:46:18</td>
+      <td>4</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.8646</td>
+      <td>0.236436</td>
+    </tr>
+    <tr>
+      <th>184</th>
+      <td>jg89598</td>
+      <td>jg7ovog</td>
+      <td>For that matter, have they ever been on the BeltLine? It's fantastic, but it really isn't all that calm. It's pretty chaotic even at the best of times. It's a far better chaos than that of, say, even mild street car traffic, but it sure isn't serene.</td>
+      <td>killroy200</td>
+      <td>2023-04-14 09:54:51</td>
+      <td>6</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.6413</td>
+      <td>0.017005</td>
+    </tr>
+    <tr>
+      <th>185</th>
+      <td>jge4jr7</td>
+      <td>jg979qe</td>
+      <td>&gt; I can't, though, figure out why you're on here so up in arms about a streetcar that might go near a few houses and then also say that you're not in the area and it doesn't affect you at all.\n\nMaybe because I'm not up in arms? Examine your faulty premises if they lead to contradictions. I think your wealth insulates you from understanding the more widespread problems I *am* up in arms about though.</td>
+      <td>NaN</td>
+      <td>2023-04-15 15:13:17</td>
+      <td>0</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.5233</td>
+      <td>0.001065</td>
+    </tr>
+    <tr>
+      <th>186</th>
+      <td>jg758xj</td>
+      <td>jg6d38k</td>
+      <td>You might call it “cynical skepticism” but literally every one of my Atlanta transportation hot takes in the past several years has proven correct as reality w.r.t. failed projects, overinflated projections, underestimated costs, etc. Whereas pretty much all of your optimism takes have aged out pretty badly. \n\nI’d like to see a world where building rail to serve  a optimistically projected 3,000 riders per day pre-pandemic was ever considered a good use of money. This is bus level ridership, not a level of riders to justify hard infrastructure. If there’s aren’t realistic funds to build a substantial part of the transit loop, I think it’s better to use the money somewhere that will attract more riders. Not a down payment that benefits so few in hopes that a miracle of cash will follow.</td>
+      <td>joe2468conrad</td>
+      <td>2023-04-14 02:35:27</td>
+      <td>4</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.9889</td>
+      <td>0.002764</td>
+    </tr>
+    <tr>
+      <th>187</th>
+      <td>jg8ir2w</td>
+      <td>jg8aebx</td>
+      <td>I'm an ardent supporter of our MARTA heavy rail. Build the backbone of our system. Expand stations, build infill stations, try to persuade other counties MARTA won't do what they did to Clayton. I would rather have 1 extra mile of MARTA heavy rail than 10 miles of BRT. \n\nHeavy rail is a totally different animal than streetcars/light rail. Streetcars are the stroad analog to rail transit. There are other less disruptive ways to provide transit on the Beltline that would be cheaper, have lower headway times, and more flexibility. Light rail on the Beltline is colossally expensive and the existing exemplar project is an abject failure. "But if we just build more it won't be as big a failure" is not a persuasive argument.</td>
+      <td>Antilon</td>
+      <td>2023-04-14 10:59:45</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.2363</td>
+      <td>0.000870</td>
+    </tr>
+    <tr>
+      <th>188</th>
+      <td>jg8rlh5</td>
+      <td>jg89znw</td>
+      <td>&gt; Basing a transit investment on ease of attending sporting events is a losing proposition. \n\nThe same people that complained about MARTA not building a rail line just to serve AFCS/The Ted should heed this.</td>
+      <td>ArchEast</td>
+      <td>2023-04-14 11:56:34</td>
+      <td>2</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.4215</td>
+      <td>0.000275</td>
+    </tr>
+    <tr>
+      <th>189</th>
+      <td>jgaz2h8</td>
+      <td>jg89znw</td>
+      <td>Agreed.   I did ride my bike to work mostly along the beltline 5 days a week while working downtown.  If the streetcar got all the way to Piedmont park, I could have used it for daily commuting.</td>
+      <td>righthandofdog</td>
+      <td>2023-04-14 21:08:05</td>
+      <td>2</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.2732</td>
+      <td>0.007046</td>
+    </tr>
+    <tr>
+      <th>190</th>
+      <td>jg88k8j</td>
+      <td>jg78hgl</td>
+      <td>Funnily enough, I'd take the route from downtown to (closer to) VaHi since I've got family that way. The current 816 is so infrequent that it's kinda a pain, but streetcar+ebike would be a great combo vs. what I do now.</td>
+      <td>killroy200</td>
+      <td>2023-04-14 09:50:47</td>
+      <td>5</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7647</td>
+      <td>0.939258</td>
+    </tr>
+    <tr>
+      <th>191</th>
+      <td>jgen9qk</td>
+      <td>jg88ehd</td>
+      <td>&gt; Some people need to move faster than walking or biking allows\n\nAnd on a busy day, biking speed on the beltline basically is walking speed.</td>
+      <td>rudie54</td>
+      <td>2023-04-15 17:29:25</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.0000</td>
+      <td>0.020141</td>
+    </tr>
+    <tr>
+      <th>192</th>
+      <td>jg8zoxx</td>
+      <td>jg8za6i</td>
+      <td>Are you saying you’d rather trolly than commute how you currently do?\n\nAnd yes I like the belt line how it is right now. Some parts are getting very commercial but that makes sense? I wish parking lots and public motorized transit would stay on the other entry point to the belt line businesses.\n\nI mean who rips out a busy rail line to make a walking trail just to put rail back onto it. We’ve gone full circle.</td>
+      <td>BIGJake111</td>
+      <td>2023-04-14 12:48:56</td>
+      <td>-2</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7587</td>
+      <td>0.367346</td>
+    </tr>
+    <tr>
+      <th>193</th>
+      <td>jg8b6d0</td>
+      <td>jg758xj</td>
+      <td>Ah, the creed of the cynic. 'Either I'm right, or pleasantly surprised'. All you've done is given yourself an excuse to feel smug about a shitty situation, and absolve yourself of any responsibility to fight for improvement. A fight, by the way, that has been occurring on the activism side to push and preserve projects and prevent even worse outcomes. A fight that carries on to try and fix some of the ongoing issues that have brought us here today.\n\nSo yes, 'cynical skepticism', which breeds self-fulfilling failure. Good job.\n\nThe first segment of MARTA's heavy rail system only served 5,000 daily riders despite being in the densest part of the city. Are you going to tell me we shouldn't have built the rest? Are you going to seriously insist that we judge a whole network off the first portion to be built?\n\nAll for what? So we can wallow in your doom and gloom of inaction? Fuck that. There's work to do. Maybe it won't all work out, but fucking so what? We'll get more than if we don't ever even try, and be objectively better off for it.</td>
+      <td>killroy200</td>
+      <td>2023-04-14 10:09:04</td>
+      <td>6</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>-0.7719</td>
+      <td>0.004564</td>
+    </tr>
+    <tr>
+      <th>194</th>
+      <td>jg8kws7</td>
+      <td>jg8ir2w</td>
+      <td>&gt; Heavy rail is a totally different animal than streetcars/light rail.\n\nIt's all about network. Service, reliability, and coverage. That applies just as much to heavy rail as it does to bus rapid transit and, yes, light rail.\n\nYour comparison to 'stroads' is weird, and nonsensical. The BeltLine was literally built for light rail, so I fail to see how they'll be disruptive. Not to mention LRVs are quiet, clean, and high-capacity. They're basically the best option for the BeltLine that's been explicitly prepared for them.</td>
+      <td>killroy200</td>
+      <td>2023-04-14 11:13:57</td>
+      <td>2</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.4604</td>
+      <td>0.974728</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>jg9cg9p</td>
+      <td>jg8ir2w</td>
+      <td>heavy rail and grade separated light rail are pretty similar, (lots of european light metros use overhead catenary) and a good portion of this is going to be running grade separated - basically the entire portion of it running alongside the beltline.</td>
+      <td>cabs84</td>
+      <td>2023-04-14 14:11:22</td>
+      <td>1</td>
+      <td>t5_2qiq9</td>
+      <td>12l1rb1</td>
+      <td>2023</td>
+      <td>Atlanta</td>
+      <td>0.7269</td>
+      <td>0.144389</td>
+    </tr>
+    </tbody>
+</table>
